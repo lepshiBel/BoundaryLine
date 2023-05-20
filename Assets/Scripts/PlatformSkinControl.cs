@@ -4,10 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkinControl : MonoBehaviour
+public class PlatformSkinControl : MonoBehaviour
 {
-    public int skinNum;
-    public Image buyPanel;
+    public int platformSkinNum;
+    public Button buyPanel;
     public int price;
     public TextMeshProUGUI itemStateText;
     public RawImage[] skins;
@@ -15,16 +15,16 @@ public class SkinControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buyPanel.color = new Color(0, 0, 0, 0.4f);
+        buyPanel.image.color = new Color(0, 0, 0, 0.4f);
 
-        if (PlayerPrefs.GetInt("Skin6" + "buy") == 0)
+        if (PlayerPrefs.GetInt("Skin12" + "buy") == 0)
         {
             foreach (RawImage image in skins)
             {
-                if ("Skin6" == image.name)
+                if ("Skin12" == image.name)
                 {
-                    PlayerPrefs.SetInt("Skin6" + "buy", 1);
-                    PlayerPrefs.SetInt("Skin6" + "equip", 1);
+                    PlayerPrefs.SetInt("Skin12" + "buy", 1);
+                    PlayerPrefs.SetInt("Skin12" + "equip", 1);
                 }
                 else
                 {
@@ -39,7 +39,7 @@ public class SkinControl : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "buy") == 1)
         {
-            buyPanel.color = new Color (0, 0, 0, 0);
+            buyPanel.image.color = new Color(0, 0, 0, 0);
 
             if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "equip") == 0)
             {
@@ -60,7 +60,7 @@ public class SkinControl : MonoBehaviour
             {
                 PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - price);
                 PlayerPrefs.SetInt(GetComponent<RawImage>().name + "buy", 1);
-                PlayerPrefs.SetInt("skinNum", skinNum);
+                PlayerPrefs.SetInt("platformSkinNum", platformSkinNum);
 
                 foreach (RawImage image in skins)
                 {
@@ -78,7 +78,7 @@ public class SkinControl : MonoBehaviour
         else if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "buy") == 1)
         {
             PlayerPrefs.SetInt(GetComponent<RawImage>().name + "equip", 1);
-            PlayerPrefs.SetInt("skinNum", skinNum);
+            PlayerPrefs.SetInt("platformSkinNum", platformSkinNum);
 
             foreach (RawImage image in skins)
             {

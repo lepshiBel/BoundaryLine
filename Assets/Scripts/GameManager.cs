@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     private int pScore;
     private int eScore;
-    private SkinControl skinControl;
 
     // Start is called before the first frame update
     void Start()
@@ -23,24 +22,10 @@ public class GameManager : MonoBehaviour
         {
             pScore = PlayerPrefs.GetInt("pScore");
         }
+
         if (PlayerPrefs.HasKey("eScore"))
         {
             eScore = PlayerPrefs.GetInt("eScore");
-        }
-        if (PlayerPrefs.GetInt("Skin6" + "buy") == 0)
-        {
-            foreach (RawImage image in skinControl.skins)
-            {
-                if ("Skin6" == image.name)
-                {
-                    PlayerPrefs.SetInt("Skin6" + "buy", 1);
-                    PlayerPrefs.SetInt("Skin6" + "equip", 1);
-                }
-                else
-                {
-                    PlayerPrefs.SetInt(GetComponent<RawImage>().name + "buy", 0);
-                }
-            }
         }
 
         playerScore.text = pScore.ToString();
@@ -52,7 +37,7 @@ public class GameManager : MonoBehaviour
         if (player == "player")
         {
             pScore++;
-            Money.money++;
+            Money.money += 100;
 
             SaveScore();
 
