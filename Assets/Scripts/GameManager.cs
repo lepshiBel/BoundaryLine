@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     private int pScore;
     private int eScore;
-    private SkinControl skinControl;
+    private BallLightSkinControl ballLightSkinControl;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("Skin6" + "buy") == 0)
         {
-            foreach (RawImage image in skinControl.skins)
+            foreach (RawImage image in ballLightSkinControl.skins)
             {
                 if ("Skin6" == image.name)
                 {

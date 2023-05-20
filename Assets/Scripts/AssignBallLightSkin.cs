@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssignSkin : MonoBehaviour
+public class AssignBallLightSkin : MonoBehaviour
 {
     public GameObject ballLight;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("skinNum") == 1)
+        if (PlayerPrefs.GetInt("lightSkinNum") == 1)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.red;
         }
-        else if (PlayerPrefs.GetInt("skinNum") == 2)
+        else if (PlayerPrefs.GetInt("lightSkinNum") == 2)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.green;
         }
-        else if (PlayerPrefs.GetInt("skinNum") == 3)
+        else if (PlayerPrefs.GetInt("lightSkinNum") == 3)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.cyan;
         }
-        else if (PlayerPrefs.GetInt("skinNum") == 4)
+        else if (PlayerPrefs.GetInt("lightSkinNum") == 4)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.blue;
         }
-        else if (PlayerPrefs.GetInt("skinNum") == 5)
+        else if (PlayerPrefs.GetInt("lightSkinNum") == 5)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.magenta;
         }

@@ -4,9 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkinControl : MonoBehaviour
+public class BallLightSkinControl : MonoBehaviour
 {
-    public int skinNum;
+    public int lightSkinNum;
     public Image buyPanel;
     public int price;
     public TextMeshProUGUI itemStateText;
@@ -39,7 +39,7 @@ public class SkinControl : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "buy") == 1)
         {
-            buyPanel.color = new Color (0, 0, 0, 0);
+            buyPanel.color = new Color(0, 0, 0, 0);
 
             if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "equip") == 0)
             {
@@ -60,7 +60,7 @@ public class SkinControl : MonoBehaviour
             {
                 PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - price);
                 PlayerPrefs.SetInt(GetComponent<RawImage>().name + "buy", 1);
-                PlayerPrefs.SetInt("skinNum", skinNum);
+                PlayerPrefs.SetInt("lightSkinNum", lightSkinNum);
 
                 foreach (RawImage image in skins)
                 {
@@ -78,7 +78,7 @@ public class SkinControl : MonoBehaviour
         else if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "buy") == 1)
         {
             PlayerPrefs.SetInt(GetComponent<RawImage>().name + "equip", 1);
-            PlayerPrefs.SetInt("skinNum", skinNum);
+            PlayerPrefs.SetInt("lightSkinNum", lightSkinNum);
 
             foreach (RawImage image in skins)
             {
