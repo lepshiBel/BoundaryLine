@@ -1,0 +1,24 @@
+CHANGELOG
+---------
+
+v1.0 - 11/11/2021
+Fixes:
+- Single quote too tall in Serif Extra Bold
+- Left parenthesis not centered in Mono Regular
+- Missing pixel on "Q" in Serif Extra Bold
+- "ß" too wide in Duo Bold
+- Thicker "©" in Salmon Serif Extra Bold
+Changes:
+- Reworked all parentheses for better consistency between styles
+- Reworked "Z" in Narrow variants
+- "ß" modified for consistency with heavier weights
+- Reworked "©" and "®" in Salmon Duo
+
+
+v0.9 - 24/08/2021
+• First public release with 12 fonts:
+  - Salmon Serif Regular, Bold, Extra Bold
+  - Salmon Serif Narrow Regular and Bold
+  - Salmon Sans Regular, Bold, Extra Bold
+  - Salmon Mono regular and Bold
+  - Salmon Duo regular and Bold
