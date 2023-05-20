@@ -9,7 +9,11 @@ public class AssignBallLightSkin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("lightSkinNum") == 1)
+        if (PlayerPrefs.GetInt("lightSkinNum") == 0)
+        {
+            ballLight.GetComponent<HardLight2D>().Color = Color.yellow;
+        }
+        else if (PlayerPrefs.GetInt("lightSkinNum") == 1)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.red;
         }
@@ -28,10 +32,6 @@ public class AssignBallLightSkin : MonoBehaviour
         else if (PlayerPrefs.GetInt("lightSkinNum") == 5)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.magenta;
-        }
-        else
-        {
-            ballLight.GetComponent<HardLight2D>().Color = Color.yellow;
         }
     }
 }

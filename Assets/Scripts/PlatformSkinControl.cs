@@ -4,9 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BallLightSkinControl : MonoBehaviour
+public class PlatformSkinControl : MonoBehaviour
 {
-    public int lightSkinNum;
+    public int platformSkinNum;
     public Button buyPanel;
     public int price;
     public TextMeshProUGUI itemStateText;
@@ -17,14 +17,14 @@ public class BallLightSkinControl : MonoBehaviour
     {
         buyPanel.image.color = new Color(0, 0, 0, 0.4f);
 
-        if (PlayerPrefs.GetInt("Skin6" + "buy") == 0)
+        if (PlayerPrefs.GetInt("Skin12" + "buy") == 0)
         {
             foreach (RawImage image in skins)
             {
-                if ("Skin6" == image.name)
+                if ("Skin12" == image.name)
                 {
-                    PlayerPrefs.SetInt("Skin6" + "buy", 1);
-                    PlayerPrefs.SetInt("Skin6" + "equip", 1);
+                    PlayerPrefs.SetInt("Skin12" + "buy", 1);
+                    PlayerPrefs.SetInt("Skin12" + "equip", 1);
                 }
                 else
                 {
@@ -60,7 +60,7 @@ public class BallLightSkinControl : MonoBehaviour
             {
                 PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - price);
                 PlayerPrefs.SetInt(GetComponent<RawImage>().name + "buy", 1);
-                PlayerPrefs.SetInt("lightSkinNum", lightSkinNum);
+                PlayerPrefs.SetInt("platformSkinNum", platformSkinNum);
 
                 foreach (RawImage image in skins)
                 {
@@ -78,7 +78,7 @@ public class BallLightSkinControl : MonoBehaviour
         else if (PlayerPrefs.GetInt(GetComponent<RawImage>().name + "buy") == 1)
         {
             PlayerPrefs.SetInt(GetComponent<RawImage>().name + "equip", 1);
-            PlayerPrefs.SetInt("lightSkinNum", lightSkinNum);
+            PlayerPrefs.SetInt("platformSkinNum", platformSkinNum);
 
             foreach (RawImage image in skins)
             {
