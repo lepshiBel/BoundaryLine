@@ -8,7 +8,7 @@ public class AccelerometerObjectMovement : MonoBehaviour
 
     private Camera camera;
 
-    private float minX, maxX, minY, maxY;
+    private float minX, maxX;
 
     private Rigidbody2D rb;
     private float speed = 30.0f;
