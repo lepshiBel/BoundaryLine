@@ -6,38 +6,69 @@ using UnityEngine.UI;
 
 public class MainOptions : MonoBehaviour
 {
-    public ToggleGroup toggleGroup;
+    public ToggleGroup themeToggleGroup;
+    public ToggleGroup controlToggleGroup;
 
-    public Toggle toggle1;
-    public Toggle toggle2;
+    public Toggle darkToggle;
+    public Toggle lightToggle;
 
-    private string toggleGroupKey = "ToggleGroupState";
+    public Toggle tiltToggle;
+    public Toggle dragToggle;
+
+    private string toggleGroupKey1 = "ToggleGroupState1";
+    private string toggleGroupKey2 = "ToggleGroupState2";
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey(toggleGroupKey))
+        if (PlayerPrefs.HasKey(toggleGroupKey1))
         {
-            int index = PlayerPrefs.GetInt(toggleGroupKey);
-            Toggle[] toggles = toggleGroup.GetComponentsInChildren<Toggle>();
+            int index = PlayerPrefs.GetInt(toggleGroupKey1);
+            Toggle[] toggles = themeToggleGroup.GetComponentsInChildren<Toggle>();
             if (index >= 0 && index < toggles.Length)
             {
                 toggles[index].isOn = true;
             }
         }
 
-        Toggle[] allToggles = toggleGroup.GetComponentsInChildren<Toggle>();
-        for (int i = 0; i < allToggles.Length; i++)
+        if (PlayerPrefs.HasKey(toggleGroupKey2))
+        {
+            int index = PlayerPrefs.GetInt(toggleGroupKey2);
+            Toggle[] toggles = controlToggleGroup.GetComponentsInChildren<Toggle>();
+            if (index >= 0 && index < toggles.Length)
+            {
+                toggles[index].isOn = true;
+            }
+        }
+
+        Toggle[] allThemeToggles = themeToggleGroup.GetComponentsInChildren<Toggle>();
+        for (int i = 0; i < allThemeToggles.Length; i++)
         {
             int index = i;
-            allToggles[i].onValueChanged.AddListener((isOn) => OnToggleValueChanged(isOn, index));
+            allThemeToggles[i].onValueChanged.AddListener((isOn) => OnThemeToggleValueChanged(isOn, index));
+        }
+
+        Toggle[] allControlToggles = controlToggleGroup.GetComponentsInChildren<Toggle>();
+        for (int i = 0; i < allControlToggles.Length; i++)
+        {
+            int index = i;
+            allControlToggles[i].onValueChanged.AddListener((isOn) => OnControlToggleValueChanged(isOn, index));
         }
     }
 
-    private void OnToggleValueChanged(bool isOn, int index)
+    private void OnThemeToggleValueChanged(bool isOn, int index)
     {
         if (isOn)
         {
-            PlayerPrefs.SetInt(toggleGroupKey, index);
+            PlayerPrefs.SetInt(toggleGroupKey1, index);
+            PlayerPrefs.Save();
+        }
+    }
+
+    private void OnControlToggleValueChanged(bool isOn, int index)
+    {
+        if (isOn)
+        {
+            PlayerPrefs.SetInt(toggleGroupKey2, index);
             PlayerPrefs.Save();
         }
     }

@@ -64,6 +64,7 @@ public class BallMove : MonoBehaviour
         isActive = true;
         transform.SetParent(null);
         rb.bodyType = RigidbodyType2D.Dynamic;
+
         rb.AddForce(new Vector2(offsetX, offsetY) * speed);
     }
 }
