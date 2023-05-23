@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4127523044167227084}
   - component: {fileID: 4127523044167227083}
   - component: {fileID: 4127523044167227120}
+  - component: {fileID: 587239579}
+  - component: {fileID: 587239580}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -28,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4127523044167227082}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -148,10 +150,10 @@ AudioSource:
   m_GameObject: {fileID: 4127523044167227082}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1071495607840446122, guid: d6bf0b4068a3ddf429383e0127c326af, type: 2}
   m_audioClip: {fileID: 8300000, guid: ddd6c09544b03114496e0a29bca23cf7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.15
+  m_Volume: 0.8
   m_Pitch: 0.25
   Loop: 0
   Mute: 0
@@ -235,6 +237,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &587239579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127523044167227082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd731c081d160014595e57e2dd7526f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballLight: {fileID: 2952146758759637233}
+--- !u!114 &587239580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127523044167227082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191e1f6fa3188c8409185247c35009ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeParameter: SoundVolume
+  mixer: {fileID: 24100000, guid: d6bf0b4068a3ddf429383e0127c326af, type: 2}
 --- !u!1001 &4127523044423838425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,11 +324,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a, type: 3}
+      propertyPath: Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a, type: 3}
       propertyPath: position.x
       value: 0.060500003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d95da88540d2d6e44a0c4c40c581b24a, type: 3}
+--- !u!1 &2952146758759637233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1278962375649610280, guid: d95da88540d2d6e44a0c4c40c581b24a, type: 3}
+  m_PrefabInstance: {fileID: 4127523044423838425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2952146758759637234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1278962375649610283, guid: d95da88540d2d6e44a0c4c40c581b24a, type: 3}
