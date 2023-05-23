@@ -42,13 +42,8 @@ public class SceneSwitcher : MonoBehaviour
             PlayerPrefs.DeleteKey("eScore");
         }
 
-        //if (scene == "Shop")
-        //{
-        //    PlayerPrefs.DeleteAll();
-        //}
-
         Time.timeScale = 1.0f;
-        //SceneManager.LoadScene(scene);
+
         StartCoroutine(LoadSceneRoutine(scene));
     }
 

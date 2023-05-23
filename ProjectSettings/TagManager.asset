@@ -11,6 +11,8 @@ TagManager:
   - EnemyScore
   - PlayerScoreTrigger
   - EnemyScoreTrigger
+  - MenuMusic
+  - GameMusic
   layers:
   - Default
   - TransparentFX
