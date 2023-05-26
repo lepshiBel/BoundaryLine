@@ -35,7 +35,7 @@ public class DragMovement : MonoBehaviour
                 Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, rb.position.y, 10)) + offset;
 
                 float objectSize = side.GetComponent<Renderer>().bounds.size.x;
-                float halfObjectWidth = transform.localScale.x / 1.81f;
+                float halfObjectWidth = transform.localScale.x / 2f;
                 float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)).x + halfObjectWidth;
                 float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 10)).x - halfObjectWidth;
                 newPosition.x = Mathf.Clamp(newPosition.x, leftBoundary, rightBoundary);
