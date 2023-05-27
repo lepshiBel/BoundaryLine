@@ -15,6 +15,10 @@ public class BallMove : MonoBehaviour
     private float offsetX;
     private float offsetY;
 
+    public bool isInZone = false;
+    private float timeInZone = 0f;
+    private float requiredTime = 0.8f;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -31,25 +35,58 @@ public class BallMove : MonoBehaviour
 
             if (touch.tapCount > 1)
             {
-                ActivateBallMoving();
+                ActivateBallMoving();             
+            }
+        }
+
+        if (isInZone)
+        {
+            timeInZone += Time.deltaTime;
+
+            if (timeInZone >= requiredTime)
+            {
+                offsetX = Random.Range(-700.0f, 700.0f);
+                offsetY = Random.Range(-700.0f, 700.0f);
+
+                rb.AddForce(new Vector2(offsetX, offsetY) * speed);
+
+                isInZone = false;
+                timeInZone = 0f;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerScoreTrigger")
+        if (collision.CompareTag("PlayerScoreTrigger"))
         {
             gameManager.WinRound("enemy");
         }
-        else if (collision.gameObject.tag == "EnemyScoreTrigger")
+        else if (collision.CompareTag("EnemyScoreTrigger"))
         {
             gameManager.WinRound("player");
         }
 
-        if (collision.gameObject.tag == "BallSoundTrigger")
+        if (collision.CompareTag("BallSoundTrigger"))
         {
             audioSource.PlayDelayed(0f);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("WaitZoneTrigger"))
+        {
+            isInZone = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("WaitZoneTrigger"))
+        {
+            isInZone = false;
+            timeInZone = 0f;
         }
     }
 
