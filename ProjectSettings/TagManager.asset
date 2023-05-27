@@ -13,6 +13,7 @@ TagManager:
   - EnemyScoreTrigger
   - MenuMusic
   - GameMusic
+  - WaitZoneTrigger
   layers:
   - Default
   - TransparentFX
