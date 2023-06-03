@@ -388,7 +388,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Game
+          m_StringArgument: SinglePlayerGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &530644243
@@ -1427,7 +1427,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770145257}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 530644244}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MultiplayerGame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1911908083
 GameObject:
   m_ObjectHideFlags: 0
