@@ -72,6 +72,13 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.DeleteKey("eScore");
         }
 
-        SceneManager.LoadScene("Game");
+        if (SceneManager.GetActiveScene().name == "SinglePlayerGame")
+        {
+            SceneManager.LoadScene("SinglePlayerGame");
+        }
+        else if (SceneManager.GetActiveScene().name == "MultiplayerGame")
+        {
+            SceneManager.LoadScene("MultiplayerGame");
+        }
     }
 }

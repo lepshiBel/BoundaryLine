@@ -17,7 +17,7 @@ public class DontDestroyMenuMusicCleanup : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Game")
+        if (scene.name == "SinglePlayerGame" || scene.name == "MultiplayerGame")
         {
             Destroy(gameObject);
         }
