@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class DragMovement : MonoBehaviour
 {
-    public GameObject side;
+    private GameObject side;
     private bool isDragging = false;
     private Vector3 startPosition;
     private Vector3 offset;
@@ -16,6 +16,7 @@ public class DragMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        side = GameObject.Find("LeftSide");
     }
 
     void Update()

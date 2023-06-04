@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AccelerometerObjectMovement : MonoBehaviour
 {
-    public GameObject side;
+    private GameObject side;
 
-    private Camera camera;
+    private new Camera camera;
 
     private float minX, maxX;
 
@@ -15,6 +15,8 @@ public class AccelerometerObjectMovement : MonoBehaviour
 
     private void Start()
     {
+        side = GameObject.Find("LeftSide");
+
         camera = Camera.main;
 
         float objectSize = side.GetComponent<Renderer>().bounds.size.x;
