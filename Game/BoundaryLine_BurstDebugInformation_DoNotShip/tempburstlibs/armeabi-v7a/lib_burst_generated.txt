@@ -115,6 +115,17 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_TILEMAP
 --compilation-defines=ENABLE_TIMELINE
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
+--compilation-defines=MIRROR
+--compilation-defines=MIRROR_57_0_OR_NEWER
+--compilation-defines=MIRROR_58_0_OR_NEWER
+--compilation-defines=MIRROR_65_0_OR_NEWER
+--compilation-defines=MIRROR_66_0_OR_NEWER
+--compilation-defines=MIRROR_2022_9_OR_NEWER
+--compilation-defines=MIRROR_2022_10_OR_NEWER
+--compilation-defines=MIRROR_70_0_OR_NEWER
+--compilation-defines=MIRROR_71_0_OR_NEWER
+--compilation-defines=MIRROR_73_OR_NEWER
+--compilation-defines=MIRROR_78_OR_NEWER
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
 --compilation-defines=PACKAGE_TILEMAP

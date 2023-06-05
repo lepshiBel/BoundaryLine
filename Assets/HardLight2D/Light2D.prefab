@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   Color: {r: 1, g: 0.88202554, b: 0.2117647, a: 1}
-  Intensity: 0.6
+  Intensity: 0.5
   SortingLayer: Default
-  SortingOrder: -1000
+  SortingOrder: 1
   filteringSettings:
     useLayerMask: 1
     layerMask:
@@ -61,7 +61,7 @@ MonoBehaviour:
     OptimizedRaycasting: 1
     CameraCulling: {fileID: 0}
     ChooseMainCamera: 0
-  position: {x: 0.1305, y: 0.0025}
+  position: {x: 0.060500003, y: 0.0025}
   TransformIsDirty: 0
   needUpdate: 0
   ContactFilter:
@@ -126,5 +126,5 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1000
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
