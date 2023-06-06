@@ -5,21 +5,56 @@ using UnityEngine.SceneManagement;
 
 public class BackgroundMusic : MonoBehaviour
 {
-    [Header("Tags")]
-    [SerializeField] private string createdTag;
+    public static BackgroundMusic Instance { get; private set; }
+    public AudioSource audioSource;
+
+    public MusicContainer MusicContainer;
+    public AssignGameMusicSkin gameMusic;
+    private bool menuMusicIsPlaying = false;
+    private bool gameMusicIsPlaying = false;
 
     private void Awake()
     {
-        GameObject gameObject = GameObject.FindWithTag(this.createdTag);
-
-        if (gameObject != null)
+        if (Instance == null)
         {
-            Destroy(this.gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            this.gameObject.tag = this.createdTag;
-            DontDestroyOnLoad(transform.root.gameObject);            
+            Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu" && !menuMusicIsPlaying)
+        {
+            Instance.ChangeAudioClip(MusicContainer.audioClips[0]);
+            menuMusicIsPlaying = true;
+            gameMusicIsPlaying = false;
+        }
+        if ((scene.name == "SinglePlayerGame" || scene.name == "MultiplayerGame") && !gameMusicIsPlaying)
+        {
+            gameMusic.ChooseMusicSkin();
+            menuMusicIsPlaying = false;
+            gameMusicIsPlaying = true;
+        }
+    }
+
+    public void ChangeAudioClip(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }
