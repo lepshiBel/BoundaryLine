@@ -9,7 +9,11 @@ public class AssignPlatformSkin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("platformSkinNum") == 0)
+        if (ThemeManager.CurrentTheme == Theme.Light)
+        {
+            platform.material.color = Color.black;
+        }
+        else if (ThemeManager.CurrentTheme == Theme.Dark && PlayerPrefs.GetInt("platformSkinNum") == 0)
         {
             platform.material.color = Color.white;
         }

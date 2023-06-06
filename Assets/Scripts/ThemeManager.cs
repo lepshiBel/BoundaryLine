@@ -2,7 +2,6 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public enum Theme
@@ -19,6 +18,7 @@ public class ThemeManager : MonoBehaviour
 
     public MainMenuObjectsContainer? mainMenuContainer;
     public GamemodeObjectsContainer? gamemodeContainer;
+    public GameObjectsContainer? gameObjectsContainer;
     public PauseMenuObjectsContainer? pauseMenuContainer;
     public OptionsObjectsContainer? optionsContainer;
     public ShopObjectsContainer? shopContainer;
@@ -39,6 +39,7 @@ public class ThemeManager : MonoBehaviour
         {
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
+            ApplyGameTheme("dark", Color.white, new Color32(0xFF, 0xFF, 0xFF, 0x22), Color.white, Color.white);
             ApplyPauseTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white);
             ApplyOptionsTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyShopTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, new Color32(0x72, 0x72, 0x72, 0xFF), Color.white);
@@ -47,6 +48,7 @@ public class ThemeManager : MonoBehaviour
         {
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
+            ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyShopTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0xD1, 0xD1, 0xD1, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -62,6 +64,7 @@ public class ThemeManager : MonoBehaviour
         {
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
+            ApplyGameTheme("dark", Color.white, new Color32(0xFF, 0xFF, 0xFF, 0x22), Color.white, Color.white);
             ApplyPauseTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white);
             ApplyOptionsTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyShopTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, new Color32(0x72, 0x72, 0x72, 0xFF), Color.white);    
@@ -70,6 +73,7 @@ public class ThemeManager : MonoBehaviour
         {
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
+            ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyShopTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0xD1, 0xD1, 0xD1, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -126,6 +130,40 @@ public class ThemeManager : MonoBehaviour
             }
 
             gamemodeContainer.icon.color = iconColor;
+        }
+    }
+
+    private void ApplyGameTheme(string backgroundType, Color pauseColor, Color scoresColor, Color platformColor, Color ballColor)
+    {
+        if (gameObjectsContainer != null)
+        {
+            for (int i = 0; i <= gameObjectsContainer.backgrounds.Length; i++)
+            {
+                if (backgroundType == "dark")
+                {
+                    gameObjectsContainer.backgrounds[0].SetActive(true);
+                    gameObjectsContainer.backgrounds[1].SetActive(false);
+                }
+                else if (backgroundType == "light")
+                {
+                    gameObjectsContainer.backgrounds[0].SetActive(false);
+                    gameObjectsContainer.backgrounds[1].SetActive(true);
+                }
+            }
+
+            gameObjectsContainer.pause.color = pauseColor;
+
+            foreach (var score in gameObjectsContainer.scores)
+            {
+                score.color = scoresColor;
+            }
+
+            foreach (var platform in gameObjectsContainer.platforms)
+            {
+                platform.GetComponent<Renderer>().material.color = platformColor;
+            }
+
+            gameObjectsContainer.ball.GetComponent<Renderer>().material.color = ballColor;
         }
     }
 
