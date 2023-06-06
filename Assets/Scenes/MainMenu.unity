@@ -133,12 +133,13 @@ GameObject:
   m_Component:
   - component: {fileID: 135811532}
   - component: {fileID: 135811534}
-  - component: {fileID: 135811536}
+  - component: {fileID: 135811538}
   - component: {fileID: 135811533}
-  - component: {fileID: 135811537}
+  - component: {fileID: 135811536}
+  - component: {fileID: 135811539}
   m_Layer: 0
-  m_Name: MenuMusic
-  m_TagString: Untagged
+  m_Name: Music
+  m_TagString: MenuMusic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &135811533
 MonoBehaviour:
@@ -170,7 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3857f51d1531d847adcf2c9908f3384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createdTag: MenuMusic
+  audioSource: {fileID: 135811534}
+  MusicContainer: {fileID: 135811538}
+  gameMusic: {fileID: 135811539}
 --- !u!82 &135811534
 AudioSource:
   m_ObjectHideFlags: 0
@@ -181,7 +184,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7907793297825778684, guid: d6bf0b4068a3ddf429383e0127c326af, type: 2}
-  m_audioClip: {fileID: 8300000, guid: db104d3f0ebc43e4181ad01f8ead02a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eb8f98739e856f841b5df22aa5e0bdc9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -282,7 +285,7 @@ MonoBehaviour:
   track: {fileID: 135811534}
   volumeParameter: MenuMusicVolume
   mixer: {fileID: 24100000, guid: d6bf0b4068a3ddf429383e0127c326af, type: 2}
---- !u!114 &135811537
+--- !u!114 &135811538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,9 +294,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 135811531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db00556cb788e748b3b87eec502aa6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b2578a0f14592a438242bfe7e129525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: eb8f98739e856f841b5df22aa5e0bdc9, type: 3}
+  - {fileID: 8300000, guid: 74ed58605847e354e90fd43756e4eb3f, type: 3}
+  - {fileID: 8300000, guid: 63251b1a5f47a9d49b57ff432095d40e, type: 3}
+  - {fileID: 8300000, guid: 621c794864530f84e93c99e71963924a, type: 3}
+  - {fileID: 8300000, guid: 38c9a9ca244bc2f49944b1cd6d53ca7d, type: 3}
+  - {fileID: 8300000, guid: 7895cc2ceb7c0a545aef5abd68e88eb7, type: 3}
+  - {fileID: 8300000, guid: 3c029ee8cd321b847ac05f943559bf88, type: 3}
+--- !u!114 &135811539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135811531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: defef264c90cba3409fcd8cad22ede09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicContainer: {fileID: 135811538}
 --- !u!1 &144210159
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuContainer: {fileID: 1286959756}
   gamemodeContainer: {fileID: 0}
+  gameObjectsContainer: {fileID: 0}
   pauseMenuContainer: {fileID: 0}
   optionsContainer: {fileID: 0}
   shopContainer: {fileID: 0}
@@ -1751,7 +1776,7 @@ Transform:
   - {fileID: 1539015311}
   - {fileID: 1286959755}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467196075
 GameObject:
