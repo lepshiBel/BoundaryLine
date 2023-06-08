@@ -126,6 +126,7 @@ Library: lib_burst_generated
 --compilation-defines=MIRROR_71_0_OR_NEWER
 --compilation-defines=MIRROR_73_OR_NEWER
 --compilation-defines=MIRROR_78_OR_NEWER
+--compilation-defines=MIRROR_79_OR_NEWER
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
 --compilation-defines=PACKAGE_TILEMAP
@@ -177,6 +178,14 @@ Library: lib_burst_generated
 --root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\SimpleWebTransport.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Mirror.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Mirror.Examples.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Mirror.Components.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Mirror.Transports.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\kcp2k.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Telepathy.dll
+--root-assembly=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\Mirror.Authenticators.dll
 --assembly-folder=D:\Projects\Unity\BoundaryLine\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

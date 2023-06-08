@@ -9,5 +9,6 @@ public class ShopObjectsContainer : MonoBehaviour
     public RawImage background;
     public TextMeshProUGUI[] texts;
     public RawImage[] slots;
+    public GameObject[] skins;
     public RawImage[] icons;
 }

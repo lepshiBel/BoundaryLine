@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Mirror;
 
-public class DragMovement : MonoBehaviour
+public class DragMovement : NetworkBehaviour
 {
     private GameObject side;
     private bool isDragging = false;
@@ -21,32 +22,35 @@ public class DragMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0)
+        if (isOwned)
         {
-            Touch touch = Input.GetTouch(0);           
-
-            if (touch.phase == TouchPhase.Began)
+            if (Input.touchCount > 0)
             {
-                isDragging = true;
-                startPosition = transform.position;
-                offset = startPosition - Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, rb.position.y, 10));
-            }
-            else if (touch.phase == TouchPhase.Moved && isDragging)
-            {
-                Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, rb.position.y, 10)) + offset;
+                Touch touch = Input.GetTouch(0);
 
-                float objectSize = side.GetComponent<Renderer>().bounds.size.x;
-                float halfObjectWidth = transform.localScale.x / 2f;
-                float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)).x + halfObjectWidth;
-                float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 10)).x - halfObjectWidth;
-                newPosition.x = Mathf.Clamp(newPosition.x, leftBoundary, rightBoundary);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    isDragging = true;
+                    startPosition = transform.position;
+                    offset = startPosition - Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, rb.position.y, 10));
+                }
+                else if (touch.phase == TouchPhase.Moved && isDragging)
+                {
+                    Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, rb.position.y, 10)) + offset;
 
-                transform.position = newPosition;
+                    float objectSize = side.GetComponent<Renderer>().bounds.size.x;
+                    float halfObjectWidth = transform.localScale.x / 2f;
+                    float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)).x + halfObjectWidth;
+                    float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 10)).x - halfObjectWidth;
+                    newPosition.x = Mathf.Clamp(newPosition.x, leftBoundary, rightBoundary);
+
+                    transform.position = newPosition;
+                }
+                else if (touch.phase == TouchPhase.Ended && isDragging)
+                {
+                    isDragging = false;
+                }
             }
-            else if (touch.phase == TouchPhase.Ended && isDragging)
-            {
-                isDragging = false;
-            }
-        }
+        }        
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 
 public class EnemyLogic : MonoBehaviour
 {
-    private Rigidbody2D rbEnemy;
     private Rigidbody2D rbBallReflection;
     private Transform targetBallReflection;
     private Transform targetBall;
