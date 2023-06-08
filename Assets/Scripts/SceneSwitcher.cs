@@ -36,7 +36,7 @@ public class SceneSwitcher : MonoBehaviour
             throw new Exception("You are trying to load already loaded scene.");
         }
 
-        if (scene == "Game")
+        if (scene == "SinglePlayerGame" || scene == "MultiplayerGame")
         {
             PlayerPrefs.DeleteKey("pScore");
             PlayerPrefs.DeleteKey("eScore");

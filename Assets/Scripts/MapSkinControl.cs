@@ -17,14 +17,30 @@ public class MapSkinControl : MonoBehaviour
     {
         buyPanel.image.color = new Color(0, 0, 0, 0.4f);
 
-        if (PlayerPrefs.GetInt("Skin18" + "buy") == 0)
+        if (PlayerPrefs.GetInt("Skin18_1" + "buy") == 0)
         {
             foreach (RawImage image in skins)
             {
-                if ("Skin18" == image.name)
+                if ("Skin18_1" == image.name)
                 {
-                    PlayerPrefs.SetInt("Skin18" + "buy", 1);
-                    PlayerPrefs.SetInt("Skin18" + "equip", 1);
+                    PlayerPrefs.SetInt("Skin18_1" + "buy", 1);
+                    PlayerPrefs.SetInt("Skin18_1" + "equip", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt(GetComponent<RawImage>().name + "buy", 0);
+                }
+            }
+        }
+
+        if (PlayerPrefs.GetInt("Skin18_2" + "buy") == 0)
+        {
+            foreach (RawImage image in skins)
+            {
+                if ("Skin18_2" == image.name)
+                {
+                    PlayerPrefs.SetInt("Skin18_2" + "buy", 1);
+                    PlayerPrefs.SetInt("Skin18_2" + "equip", 1);
                 }
                 else
                 {

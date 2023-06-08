@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class AccelerometerObjectMovement : MonoBehaviour
+public class AccelerometerObjectMovement : NetworkBehaviour
 {
     private GameObject side;
 
@@ -33,13 +34,16 @@ public class AccelerometerObjectMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 dir = Vector3.zero;
-        dir.x = Input.acceleration.x;
+        if (isOwned)
+        {
+            Vector3 dir = Vector3.zero;
+            dir.x = Input.acceleration.x;
 
-        float positionX = rb.position.x + dir.x * speed * Time.deltaTime;
+            float positionX = rb.position.x + dir.x * speed * Time.deltaTime;
 
-        positionX = Mathf.Clamp(positionX, minX, maxX);
+            positionX = Mathf.Clamp(positionX, minX, maxX);
 
-        rb.MovePosition(new Vector2(positionX, rb.position.y));
+            rb.MovePosition(new Vector2(positionX, rb.position.y));
+        }    
     }
 }

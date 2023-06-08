@@ -33,6 +33,10 @@ public class AssignMapSkin : MonoBehaviour
         {
             ChangeBackground(5);
         }
+        else if (PlayerPrefs.GetInt("mapSkinNum") == 6)
+        {
+            ChangeBackground(6);
+        }
     }
 
     private void ChangeBackground(int bgNumber)

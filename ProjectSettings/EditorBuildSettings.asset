@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Gamemode.unity
     guid: 12c0a9676db3cd949a693de9ef735241
   - enabled: 1
+    path: Assets/Scenes/Offline.unity
+    guid: c0c349812f636bc469b1e845aeb218f2
+  - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 60faac56bed5b7f4fb1e45c4463f5d20
   - enabled: 1
