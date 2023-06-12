@@ -25,6 +25,9 @@ public class MapSkinControl : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("Skin18_1" + "buy", 1);
                     PlayerPrefs.SetInt("Skin18_1" + "equip", 1);
+
+                    PlayerPrefs.SetInt("Skin18_2" + "buy", 0);
+                    PlayerPrefs.SetInt("Skin18_2" + "equip", 0);
                 }
                 else
                 {
@@ -39,6 +42,9 @@ public class MapSkinControl : MonoBehaviour
             {
                 if ("Skin18_2" == image.name)
                 {
+                    PlayerPrefs.SetInt("Skin18_1" + "buy", 0);
+                    PlayerPrefs.SetInt("Skin18_1" + "equip", 0);
+
                     PlayerPrefs.SetInt("Skin18_2" + "buy", 1);
                     PlayerPrefs.SetInt("Skin18_2" + "equip", 1);
                 }
