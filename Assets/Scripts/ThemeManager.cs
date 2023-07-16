@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Theme
 {
@@ -15,6 +16,8 @@ public class ThemeManager : MonoBehaviour
     public static Theme CurrentTheme { get; private set; } = Theme.Dark;
 
     private const string ThemeKey = "SelectedTheme";
+
+    public RawImage? skin;
 
     public MainMenuObjectsContainer? mainMenuContainer;
     public GamemodeObjectsContainer? gamemodeContainer;
@@ -40,6 +43,11 @@ public class ThemeManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("mapSkinNum", 0);
 
+            if (skin != null)
+            {
+                skin.color = Color.white;
+            }
+
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
             ApplyOfflineTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
@@ -51,6 +59,11 @@ public class ThemeManager : MonoBehaviour
         else if (PlayerPrefs.GetInt(ThemeKey) == 1)
         {
             PlayerPrefs.SetInt("mapSkinNum", 1);
+
+            if (skin != null)
+            {
+                skin.color = Color.black;
+            }
 
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -71,6 +84,11 @@ public class ThemeManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("mapSkinNum", 0);
 
+            if (skin != null)
+            {
+                skin.color = Color.white;
+            }
+
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
             ApplyOfflineTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
@@ -82,6 +100,11 @@ public class ThemeManager : MonoBehaviour
         else if (PlayerPrefs.GetInt(ThemeKey) == 1)
         {
             PlayerPrefs.SetInt("mapSkinNum", 1);
+
+            if (skin != null)
+            {
+                skin.color = Color.black;
+            }
 
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
