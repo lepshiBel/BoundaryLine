@@ -38,6 +38,8 @@ public class ThemeManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt(ThemeKey) == 0)
         {
+            PlayerPrefs.SetInt("mapSkinNum", 0);
+
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
             ApplyOfflineTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
@@ -48,20 +50,12 @@ public class ThemeManager : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt(ThemeKey) == 1)
         {
+            PlayerPrefs.SetInt("mapSkinNum", 1);
+
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
-            ApplyOfflineTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
-            
-            if (PlayerPrefs.GetInt("mapSkinNum") == 0)
-            {
-                ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
-            }
-            else
-            {
-                ApplyGameTheme("light", Color.white, Color.white, Color.black, Color.white);
-            }
-            
-            
+            ApplyOfflineTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));           
+            ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);      
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyShopTheme("light", Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0xD1, 0xD1, 0xD1, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -75,6 +69,8 @@ public class ThemeManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt(ThemeKey) == 0)
         {
+            PlayerPrefs.SetInt("mapSkinNum", 0);
+
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
             ApplyOfflineTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
@@ -85,19 +81,12 @@ public class ThemeManager : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt(ThemeKey) == 1)
         {
+            PlayerPrefs.SetInt("mapSkinNum", 1);
+
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyOfflineTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
-            
-            if (PlayerPrefs.GetInt("mapSkinNum") == 0)
-            {
-                ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
-            }
-            else
-            {
-                ApplyGameTheme("light", Color.white, Color.white, Color.black, Color.white);
-            }
-
+            ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyShopTheme("light", Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0xD1, 0xD1, 0xD1, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));

@@ -9,9 +9,13 @@ public class AssignPlatformSkin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (ThemeManager.CurrentTheme == Theme.Light && PlayerPrefs.GetInt("mapSkinNum") == 0)
+        if (ThemeManager.CurrentTheme == Theme.Light)
         {
             platform.material.color = Color.black;
+        }
+        else if (ThemeManager.CurrentTheme == Theme.Dark)
+        {
+            platform.material.color = Color.white;
         }
         else if (PlayerPrefs.GetInt("platformSkinNum") == 0)
         {
