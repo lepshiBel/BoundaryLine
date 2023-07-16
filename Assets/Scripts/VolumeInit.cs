@@ -16,7 +16,7 @@ public class VolumeInit : MonoBehaviour
             track.loop = true;
         }
 
-        var volumeValue = PlayerPrefs.GetFloat(volumeParameter, -40f);
+        var volumeValue = PlayerPrefs.GetFloat(volumeParameter, -10f);
         mixer.SetFloat(volumeParameter, volumeValue);
     }
 }
