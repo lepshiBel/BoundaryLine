@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 40771778a095b3c47b63a5dd465a1f41
   - enabled: 1
-    path: Assets/Scenes/Gamemode.unity
-    guid: 12c0a9676db3cd949a693de9ef735241
-  - enabled: 1
-    path: Assets/Scenes/Offline.unity
-    guid: c0c349812f636bc469b1e845aeb218f2
-  - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 60faac56bed5b7f4fb1e45c4463f5d20
   - enabled: 1
@@ -23,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SinglePlayerGame.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
-    path: Assets/Scenes/MultiplayerGame.unity
-    guid: ae0401efcc0ccec4f8aa776910cedea3
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: ade5350e52f6d814880949b768630c08, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 2afb9a44eaf791349b3d03758e9af380, type: 2}
