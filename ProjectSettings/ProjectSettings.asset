@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: EternityLot
   productName: Boundary Line
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.2
+  bundleVersion: 0.1
   preloadedAssets:
   - {fileID: -5130553055306614764, guid: ade5350e52f6d814880949b768630c08, type: 2}
   - {fileID: 11400000, guid: 2afb9a44eaf791349b3d03758e9af380, type: 2}
