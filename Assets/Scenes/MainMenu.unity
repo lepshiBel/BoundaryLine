@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca77d316a3da7746a0aaf3e8c939720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skin: {fileID: 0}
   mainMenuContainer: {fileID: 1286959756}
   gamemodeContainer: {fileID: 0}
   offlineContainer: {fileID: 0}
