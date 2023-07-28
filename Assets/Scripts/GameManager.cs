@@ -70,8 +70,6 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.DeleteKey("pScore");
             PlayerPrefs.DeleteKey("eScore");
-
-            InterstitialAd.interstitialAd.ShowAd();
         }
 
         if (SceneManager.GetActiveScene().name == "SinglePlayerGame")

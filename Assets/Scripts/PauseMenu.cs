@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public ChangeOrderInLayer changeOrderInLayer;
     public GameObject pauseMenuUI;
 
     public static bool gameIsPaused = false;
@@ -34,16 +36,20 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Resume()
-    {    
+    {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
-        gameIsPaused = false; 
+        gameIsPaused = false;
+
+        changeOrderInLayer.RiseOrderInLayers();
     }
 
     private void Pause()
     {
         pauseMenuUI.SetActive(true); 
         Time.timeScale = 0f;
-        gameIsPaused = true; 
+        gameIsPaused = true;
+
+        changeOrderInLayer.LowOrderInLayers();
     }
 }
