@@ -21,7 +21,7 @@ public class ThemeManager : MonoBehaviour
 
     public MainMenuObjectsContainer? mainMenuContainer;
     public GamemodeObjectsContainer? gamemodeContainer;
-    public OfflineObjectsContainer? offlineContainer;
+    //public OfflineObjectsContainer? offlineContainer;
     public GameObjectsContainer? gameContainer;
     public PauseMenuObjectsContainer? pauseMenuContainer;
     public OptionsObjectsContainer? optionsContainer;
@@ -50,7 +50,6 @@ public class ThemeManager : MonoBehaviour
 
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
-            ApplyOfflineTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
             ApplyGameTheme("dark", Color.white, Color.white, Color.white, Color.white);
             ApplyPauseTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white);
             ApplyOptionsTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
@@ -66,8 +65,7 @@ public class ThemeManager : MonoBehaviour
             }
 
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
-            ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
-            ApplyOfflineTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));           
+            ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));    
             ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);      
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -91,7 +89,6 @@ public class ThemeManager : MonoBehaviour
 
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
-            ApplyOfflineTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
             ApplyGameTheme("dark", Color.white, Color.white, Color.white, Color.white);
             ApplyPauseTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white);
             ApplyOptionsTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
@@ -108,7 +105,6 @@ public class ThemeManager : MonoBehaviour
 
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
-            ApplyOfflineTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -166,28 +162,6 @@ public class ThemeManager : MonoBehaviour
             }
 
             gamemodeContainer.icon.color = iconColor;
-        }
-    }
-
-    private void ApplyOfflineTheme(Color backgroundColor, Color titleColor, Color buttonsColor, Color buttonTextsColor, Color iconColor)
-    {
-        if (offlineContainer != null)
-        {
-            offlineContainer.background.color = backgroundColor;
-
-            offlineContainer.title.color = titleColor;
-
-            foreach (var button in offlineContainer.buttons)
-            {
-                button.color = buttonsColor;
-            }
-
-            foreach (var text in offlineContainer.buttonTexts)
-            {
-                text.color = buttonTextsColor;
-            }
-
-            offlineContainer.icon.color = iconColor;
         }
     }
 
