@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 55356945}
   - component: {fileID: 55356946}
-  - component: {fileID: 55356947}
   m_Layer: 0
   m_Name: WaitZoneTrigger
   m_TagString: WaitZoneTrigger
@@ -182,18 +181,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8887328, y: 12.46203}
   m_EdgeRadius: 0
---- !u!114 &55356947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55356944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &82516137
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b000a3d26972764d9d7d345703feea7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2dd2673a9ecd4cc40ada2ef44c914004, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -965,7 +952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 655fa1d2bbc62cc4ea1b44128b47596e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38311c2ebc9337a44a89649e7d86b147, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -993,7 +980,6 @@ GameObject:
   m_Component:
   - component: {fileID: 317687683}
   - component: {fileID: 317687684}
-  - component: {fileID: 317687685}
   m_Layer: 0
   m_Name: BallSoundTrigger
   m_TagString: BallSoundTrigger
@@ -1042,18 +1028,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14999998, y: 16.843794}
   m_EdgeRadius: 0
---- !u!114 &317687685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317687682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &347292864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1344,6 @@ GameObject:
   - component: {fileID: 418409943}
   - component: {fileID: 418409942}
   - component: {fileID: 418409944}
-  - component: {fileID: 418409945}
   m_Layer: 0
   m_Name: LeftSide
   m_TagString: Untagged
@@ -1471,18 +1444,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &418409945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418409940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +1810,6 @@ GameObject:
   m_Component:
   - component: {fileID: 869021137}
   - component: {fileID: 869021138}
-  - component: {fileID: 869021139}
   m_Layer: 0
   m_Name: WaitZoneTrigger
   m_TagString: WaitZoneTrigger
@@ -1898,18 +1858,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8128545, y: 15.2576885}
   m_EdgeRadius: 0
---- !u!114 &869021139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869021136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &896001400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1868,6 @@ GameObject:
   m_Component:
   - component: {fileID: 896001402}
   - component: {fileID: 896001401}
-  - component: {fileID: 896001403}
   m_Layer: 0
   m_Name: ScoreTrigger
   m_TagString: EnemyScoreTrigger
@@ -1969,18 +1916,6 @@ Transform:
   m_Father: {fileID: 532662389}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &896001403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896001400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &936014809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2090,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969268925}
   m_CullTransparentMesh: 1
---- !u!43 &977412441
+--- !u!43 &989087881
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2850,7 +2785,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1272249233}
   - component: {fileID: 1272249234}
-  - component: {fileID: 1272249235}
   m_Layer: 0
   m_Name: WaitZoneTrigger
   m_TagString: WaitZoneTrigger
@@ -2899,18 +2833,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75529695, y: 15.389215}
   m_EdgeRadius: 0
---- !u!114 &1272249235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272249232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1277189323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,7 +3336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 11369b7b03a675948986092c6a509bd1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd40f447363cbb64f80e2dcf2d566f31, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3574,7 +3496,6 @@ GameObject:
   - component: {fileID: 1482410479}
   - component: {fileID: 1482410478}
   - component: {fileID: 1482410477}
-  - component: {fileID: 1482410480}
   m_Layer: 0
   m_Name: RightSide
   m_TagString: Untagged
@@ -3675,18 +3596,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1482410480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482410476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1491425020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,7 +3843,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1741043874}
   - component: {fileID: 1741043873}
-  - component: {fileID: 1741043875}
   m_Layer: 0
   m_Name: ScoreTrigger
   m_TagString: PlayerScoreTrigger
@@ -3983,18 +3891,6 @@ Transform:
   m_Father: {fileID: 532662389}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1741043875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741043872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1744776455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,7 +3981,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1756024918}
   - component: {fileID: 1756024919}
-  - component: {fileID: 1756024920}
   m_Layer: 0
   m_Name: BallSoundTrigger
   m_TagString: BallSoundTrigger
@@ -4134,18 +4029,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14999998, y: 16.906845}
   m_EdgeRadius: 0
---- !u!114 &1756024920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756024917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1811722113
 GameObject:
   m_ObjectHideFlags: 0
@@ -4508,7 +4391,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2015223243}
   - component: {fileID: 2015223244}
-  - component: {fileID: 2015223245}
   m_Layer: 0
   m_Name: WaitZoneTrigger
   m_TagString: WaitZoneTrigger
@@ -4557,18 +4439,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8887328, y: 12.286997}
   m_EdgeRadius: 0
---- !u!114 &2015223245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015223242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6024074bcca5934e9aa34100c3ee8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2073648813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4798,7 +4668,7 @@ PrefabInstance:
     - target: {fileID: 2952146758759637244, guid: 0b67647362c29af4596bf04e98ba9ae2, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 977412441}
+      objectReference: {fileID: 989087881}
     - target: {fileID: 4127523044167227082, guid: 0b67647362c29af4596bf04e98ba9ae2, type: 3}
       propertyPath: m_Name
       value: Ball

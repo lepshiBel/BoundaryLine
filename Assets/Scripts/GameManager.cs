@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         if (player == "player")
         {
             pScore++;
-            Money.money++;
+            Money.money+=500;
 
             SaveScore();
 

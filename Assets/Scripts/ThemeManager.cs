@@ -17,11 +17,8 @@ public class ThemeManager : MonoBehaviour
 
     private const string ThemeKey = "SelectedTheme";
 
-    public RawImage? skin;
-
     public MainMenuObjectsContainer? mainMenuContainer;
     public GamemodeObjectsContainer? gamemodeContainer;
-    //public OfflineObjectsContainer? offlineContainer;
     public GameObjectsContainer? gameContainer;
     public PauseMenuObjectsContainer? pauseMenuContainer;
     public OptionsObjectsContainer? optionsContainer;
@@ -41,32 +38,25 @@ public class ThemeManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt(ThemeKey) == 0)
         {
-            PlayerPrefs.SetInt("mapSkinNum", 0);
-
-            if (skin != null)
-            {
-                skin.color = Color.white;
-            }
-
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
-            ApplyGameTheme("dark", Color.white, Color.white, Color.white, Color.white);
+            
+            ApplyGameTheme(Color.white, Color.white, Color.white, Color.white);        
+
             ApplyPauseTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white);
             ApplyOptionsTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyShopTheme("dark", new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, new Color32(0x72, 0x72, 0x72, 0xFF), Color.white);
         }
         else if (PlayerPrefs.GetInt(ThemeKey) == 1)
         {
-            PlayerPrefs.SetInt("mapSkinNum", 1);
+            ApplyMainMenuTheme(Color.white, Color.white, Color.white);
+            ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
 
-            if (skin != null)
+            if (PlayerPrefs.GetInt("mapSkinNum") == 1)
             {
-                skin.color = Color.black;
+                ApplyGameTheme(Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
             }
 
-            ApplyMainMenuTheme(Color.white, Color.white, Color.white);
-            ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));    
-            ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);      
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyShopTheme("light", Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0xD1, 0xD1, 0xD1, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -82,14 +72,11 @@ public class ThemeManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("mapSkinNum", 0);
 
-            if (skin != null)
-            {
-                skin.color = Color.white;
-            }
-
             ApplyMainMenuTheme(new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF), new Color32(0x9C, 0x2C, 0x53, 0xFF));
             ApplyGamemodeTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white, Color.white);
-            ApplyGameTheme("dark", Color.white, Color.white, Color.white, Color.white);
+
+            ApplyGameTheme(Color.white, Color.white, Color.white, Color.white);
+
             ApplyPauseTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, Color.white);
             ApplyOptionsTheme(new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyShopTheme("dark", new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, new Color32(0x72, 0x72, 0x72, 0xFF), Color.white);    
@@ -98,14 +85,14 @@ public class ThemeManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("mapSkinNum", 1);
 
-            if (skin != null)
-            {
-                skin.color = Color.black;
-            }
-
             ApplyMainMenuTheme(Color.white, Color.white, Color.white);
             ApplyGamemodeTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF));
-            ApplyGameTheme("light", Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
+
+            if (PlayerPrefs.GetInt("mapSkinNum") == 1)
+            {
+                ApplyGameTheme(Color.black, new Color32(0x00, 0x00, 0x00, 0x82), Color.black, Color.black);
+            }
+
             ApplyPauseTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), Color.white, Color.white);
             ApplyOptionsTheme(Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
             ApplyShopTheme("light", Color.white, new Color32(0x2E, 0x2E, 0x2E, 0xFF), new Color32(0xD1, 0xD1, 0xD1, 0xFF), new Color32(0x2E, 0x2E, 0x2E, 0xFF));
@@ -165,24 +152,10 @@ public class ThemeManager : MonoBehaviour
         }
     }
 
-    private void ApplyGameTheme(string backgroundType, Color pauseColor, Color scoresColor, Color platformColor, Color ballColor)
+    private void ApplyGameTheme(Color pauseColor, Color scoresColor, Color platformColor, Color ballColor)
     {
         if (gameContainer != null)
         {
-            for (int i = 0; i <= gameContainer.backgrounds.Length; i++)
-            {
-                if (backgroundType == "dark")
-                {
-                    gameContainer.backgrounds[0].SetActive(true);
-                    gameContainer.backgrounds[1].SetActive(false);
-                }
-                else if (backgroundType == "light")
-                {
-                    gameContainer.backgrounds[0].SetActive(false);
-                    gameContainer.backgrounds[1].SetActive(true);
-                }
-            }
-
             gameContainer.pause.color = pauseColor;
 
             foreach (var score in gameContainer.scores)

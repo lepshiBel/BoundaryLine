@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 076e0e5e365234b44ac481f0babfeac0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 4197c3dc22fd90d48abee423bed2decf, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3988,7 +3988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 919ff6b236fd97c4fa683ed363edbed1, type: 3}
+  m_Texture: {fileID: 2800000, guid: faad4e6d9a1cbb54da7f830bce479de5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2ed530e751a09d7439c88de0a58efc4a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6353473852e01da4d9c6b73423ed9eee, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5755,9 +5755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92df55e89098c04288c1e7da8771c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapSkinNum: 1
+  mapSkinNum: 0
   buyPanel: {fileID: 639201858}
-  price: 50
+  price: 0
   itemStateText: {fileID: 1407645983}
   skins:
   - {fileID: 1314927786}
@@ -6891,7 +6891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMusicSkinNum: 0
   buyPanel: {fileID: 230226634}
-  price: 50
+  price: 0
   itemStateText: {fileID: 354923719}
   skins:
   - {fileID: 865063463}
@@ -6920,7 +6920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4f3307f317f5b0a4cbff78dbb75eb00b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0deabf05c31389d4a9010137269109f3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7385,7 +7385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953049156}
-  - component: {fileID: 953049159}
+  - component: {fileID: 953049158}
   - component: {fileID: 953049157}
   m_Layer: 0
   m_Name: AdsSettingsManager
@@ -7418,12 +7418,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 953049155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 312b684d80691fc42aea035ca81b1d69, type: 3}
+  m_Script: {fileID: 11500000, guid: e62160f9265b4e24885f3fadab0e1b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   androidAdUnityId: Rewarded_Android
   iosAdUnityId: Rewarded_iOS
---- !u!114 &953049159
+--- !u!114 &953049158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7432,7 +7432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 953049155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281ada2f83ebbc24ab479c52be83c56a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6546823d28a0d6941b21ade2d8cb93ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   testMod: 1
@@ -8249,7 +8249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b1b90be71ef87794cbd575e55b92690f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 491b898313264474b9816e3a1345439d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -8481,7 +8481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d947be41a9b9ce47b2814594293f456, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8e8d3f24372677a42bc825d9ab206a2e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9384,9 +9384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92df55e89098c04288c1e7da8771c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapSkinNum: 0
+  mapSkinNum: 1
   buyPanel: {fileID: 884408024}
-  price: 50
+  price: 0
   itemStateText: {fileID: 1607755284}
   skins:
   - {fileID: 1314927786}
@@ -11467,7 +11467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightSkinNum: 0
   buyPanel: {fileID: 1120069658}
-  price: 50
+  price: 0
   itemStateText: {fileID: 1112286112}
   skins:
   - {fileID: 1543171013}
@@ -11775,7 +11775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformSkinNum: 0
   buyPanel: {fileID: 23300331}
-  price: 50
+  price: 0
   itemStateText: {fileID: 351312506}
   skins:
   - {fileID: 1631783511}
@@ -11924,7 +11924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 02645182e61f6724cb78ef6ad8ebf858, type: 3}
+  m_Texture: {fileID: 2800000, guid: 75a2ae7bcf8fc824e9aef9016ad53f1d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -13195,7 +13195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4b799bdfdaa1ad74ba86572af1716374, type: 3}
+  m_Texture: {fileID: 2800000, guid: fa598d5e019ffed428ce0ca04f737faa, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -13297,10 +13297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca77d316a3da7746a0aaf3e8c939720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 1631783511}
   mainMenuContainer: {fileID: 0}
   gamemodeContainer: {fileID: 0}
-  offlineContainer: {fileID: 0}
   gameContainer: {fileID: 0}
   pauseMenuContainer: {fileID: 0}
   optionsContainer: {fileID: 0}
@@ -14176,7 +14174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4dd1cf517f07b724b9309da0ce067245, type: 3}
+  m_Texture: {fileID: 2800000, guid: d0df46ed4e1125749a8ac277c3b65227, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
