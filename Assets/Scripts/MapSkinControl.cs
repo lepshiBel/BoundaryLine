@@ -17,12 +17,14 @@ public class MapSkinControl : MonoBehaviour
     {
         buyPanel.image.color = new Color(0, 0, 0, 0.4f);
 
-        if (PlayerPrefs.GetInt("Skin18_1" + "buy") == 0)
+        if (PlayerPrefs.GetInt("Skin18_1" + "buy") == 0 && ThemeManager.CurrentTheme == Theme.Dark)
         {
             foreach (RawImage image in skins)
             {
                 if ("Skin18_1" == image.name)
                 {
+                    buyPanel.image.color = new Color(0, 0, 0, 0f);
+
                     PlayerPrefs.SetInt("Skin18_1" + "buy", 1);
                     PlayerPrefs.SetInt("Skin18_1" + "equip", 1);
 
@@ -36,12 +38,14 @@ public class MapSkinControl : MonoBehaviour
             }
         }
 
-        if (PlayerPrefs.GetInt("Skin18_2" + "buy") == 0)
+        if (PlayerPrefs.GetInt("Skin18_2" + "buy") == 0 && ThemeManager.CurrentTheme == Theme.Light)
         {
             foreach (RawImage image in skins)
             {
                 if ("Skin18_2" == image.name)
                 {
+                    buyPanel.image.color = new Color(0, 0, 0, 0f);
+
                     PlayerPrefs.SetInt("Skin18_1" + "buy", 0);
                     PlayerPrefs.SetInt("Skin18_1" + "equip", 0);
 

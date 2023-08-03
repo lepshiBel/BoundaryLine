@@ -4,6 +4,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+Game/
 Assets/AssetStoreTools*
 Assets/
 Logs/
@@ -20,16 +21,19 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.cpp
 *.suo
 *.tmp
 *.user
 *.userprefs
 *.pidb
+*.meta
 *.booproj
 *.svd
 *.pdb
 *.opendb
 *.VC.db
+*.dll
 
 # Unity3D generated meta files
 *.pidb.meta

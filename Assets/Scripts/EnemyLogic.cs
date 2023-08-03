@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -22,11 +23,28 @@ public class EnemyLogic : MonoBehaviour
     {
         rbBallReflection.MovePosition(new Vector2(targetBall.position.x, rbBallReflection.position.y));
 
-        if (Vector2.Distance(transform.position, targetBall.position) < 8)
+        if (Vector2.Distance(transform.position, targetBall.position) < 10)
         {
-            if (Mathf.Abs(targetBallReflection.position.x) < 2.7)
+            if (Screen.width <= 1080)
             {
-                transform.position = Vector2.Lerp(transform.position, targetBallReflection.position, speed * Time.deltaTime);
+                if (Mathf.Abs(targetBallReflection.position.x) < 2.7)
+                {
+                    transform.position = Vector2.Lerp(transform.position, targetBallReflection.position, speed * Time.deltaTime);
+                }
+            }
+            else if (Screen.width > 1080 && Screen.width <= 1450)
+            {
+                if (Mathf.Abs(targetBallReflection.position.x) < 3)
+                {
+                    transform.position = Vector2.Lerp(transform.position, targetBallReflection.position, speed * Time.deltaTime);
+                }
+            }
+            else
+            {
+                if (Mathf.Abs(targetBallReflection.position.x) < 4.5)
+                {
+                    transform.position = Vector2.Lerp(transform.position, targetBallReflection.position, speed * Time.deltaTime);
+                }
             }
         }
     }

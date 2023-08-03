@@ -9,7 +9,7 @@ public class AssignBallLightSkin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (ThemeManager.CurrentTheme == Theme.Light)
+        if (ThemeManager.CurrentTheme == Theme.Light && PlayerPrefs.GetInt("lightSkinNum") == 0 && PlayerPrefs.GetInt("mapSkinNum") == 1)
         {
             ballLight.GetComponent<HardLight2D>().Color = Color.black;
         }
