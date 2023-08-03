@@ -328,8 +328,8 @@ extern void ThemeManager_SetTheme_mA3C8AFAB194266400AC1973039052884E7CB52C6 (voi
 extern void ThemeManager_ApplyMainMenuTheme_m4117C398F84FAEB50B2FF88B76A8EC049D9ADDFD (void);
 // 0x0000009E System.Void ThemeManager::ApplyGamemodeTheme(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color)
 extern void ThemeManager_ApplyGamemodeTheme_m2D55004DA803EA78883536DFE44E6FCF58646EA8 (void);
-// 0x0000009F System.Void ThemeManager::ApplyGameTheme(System.String,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color)
-extern void ThemeManager_ApplyGameTheme_mF5529D259CC3CE704F2D6DA4557460664A5AE9CA (void);
+// 0x0000009F System.Void ThemeManager::ApplyGameTheme(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color)
+extern void ThemeManager_ApplyGameTheme_m5DE0501F5EC15D27EE5444D3F4153A34D3FA3435 (void);
 // 0x000000A0 System.Void ThemeManager::ApplyPauseTheme(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color)
 extern void ThemeManager_ApplyPauseTheme_mAB988F022D0EA83A8BE3DE51C218BD03BEE64D39 (void);
 // 0x000000A1 System.Void ThemeManager::ApplyOptionsTheme(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color)
@@ -1046,7 +1046,7 @@ static Il2CppMethodPointer s_methodPointers[437] =
 	ThemeManager_SetTheme_mA3C8AFAB194266400AC1973039052884E7CB52C6,
 	ThemeManager_ApplyMainMenuTheme_m4117C398F84FAEB50B2FF88B76A8EC049D9ADDFD,
 	ThemeManager_ApplyGamemodeTheme_m2D55004DA803EA78883536DFE44E6FCF58646EA8,
-	ThemeManager_ApplyGameTheme_mF5529D259CC3CE704F2D6DA4557460664A5AE9CA,
+	ThemeManager_ApplyGameTheme_m5DE0501F5EC15D27EE5444D3F4153A34D3FA3435,
 	ThemeManager_ApplyPauseTheme_mAB988F022D0EA83A8BE3DE51C218BD03BEE64D39,
 	ThemeManager_ApplyOptionsTheme_m68D95333A3E6AF55952FDD4D5FA38E7E5CDB4DDC,
 	ThemeManager_ApplyShopTheme_m2C03CE284C985A78B8941E9D3E548FA02F3F05A0,
@@ -1486,7 +1486,7 @@ static const int32_t s_InvokerIndices[437] =
 	3470,
 	906,
 	308,
-	326,
+	609,
 	609,
 	906,
 	326,

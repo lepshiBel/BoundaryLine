@@ -22924,20 +22924,18 @@ struct TextMeshSpawner_tB6905931E9BE4D7A2A2E37A51E221A7B462D75BB  : public MonoB
 // ThemeManager
 struct ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.UI.RawImage ThemeManager::skin
-	RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* ___skin_6;
 	// MainMenuObjectsContainer ThemeManager::mainMenuContainer
-	MainMenuObjectsContainer_tDD8B1D215286693DC65220336E40EFAFC2E2E4DA* ___mainMenuContainer_7;
+	MainMenuObjectsContainer_tDD8B1D215286693DC65220336E40EFAFC2E2E4DA* ___mainMenuContainer_6;
 	// GamemodeObjectsContainer ThemeManager::gamemodeContainer
-	GamemodeObjectsContainer_t01D69AEB264A8D8B7B4D6CA2A44B1ABD27B5626D* ___gamemodeContainer_8;
+	GamemodeObjectsContainer_t01D69AEB264A8D8B7B4D6CA2A44B1ABD27B5626D* ___gamemodeContainer_7;
 	// GameObjectsContainer ThemeManager::gameContainer
-	GameObjectsContainer_tAEF9D45D037B8A707684C1F3EE914593D0D56AF7* ___gameContainer_9;
+	GameObjectsContainer_tAEF9D45D037B8A707684C1F3EE914593D0D56AF7* ___gameContainer_8;
 	// PauseMenuObjectsContainer ThemeManager::pauseMenuContainer
-	PauseMenuObjectsContainer_t9016EEDCC820E57271EE5DE3F6A758C277A68959* ___pauseMenuContainer_10;
+	PauseMenuObjectsContainer_t9016EEDCC820E57271EE5DE3F6A758C277A68959* ___pauseMenuContainer_9;
 	// OptionsObjectsContainer ThemeManager::optionsContainer
-	OptionsObjectsContainer_t7A0465F94EE8B88226BDF62DCDD67EAE738F7BEB* ___optionsContainer_11;
+	OptionsObjectsContainer_t7A0465F94EE8B88226BDF62DCDD67EAE738F7BEB* ___optionsContainer_10;
 	// ShopObjectsContainer ThemeManager::shopContainer
-	ShopObjectsContainer_t76E4C7E765160A8357D8114D69E7D992B9D21160* ___shopContainer_12;
+	ShopObjectsContainer_t76E4C7E765160A8357D8114D69E7D992B9D21160* ___shopContainer_11;
 };
 
 struct ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14_StaticFields
@@ -27237,9 +27235,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5013[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5014[3] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5015[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5015[8] = 
 {
-	static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14_StaticFields, ___U3CCurrentThemeU3Ek__BackingField_4)),0,static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___skin_6)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___mainMenuContainer_7)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___gamemodeContainer_8)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___gameContainer_9)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___pauseMenuContainer_10)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___optionsContainer_11)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___shopContainer_12)),};
+	static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14_StaticFields, ___U3CCurrentThemeU3Ek__BackingField_4)),0,static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___mainMenuContainer_6)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___gamemodeContainer_7)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___gameContainer_8)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___pauseMenuContainer_9)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___optionsContainer_10)),static_cast<int32_t>(offsetof(ThemeManager_t79B58AB1C8D9E9A89887351E649830FCF02B0B14, ___shopContainer_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5016[5] = 
 {
 	static_cast<int32_t>(offsetof(VolumeControl_t0FB79DB008D97572BC239981A26A7C880BA104F0, ___volumeParameter_4)),static_cast<int32_t>(offsetof(VolumeControl_t0FB79DB008D97572BC239981A26A7C880BA104F0, ___mixer_5)),static_cast<int32_t>(offsetof(VolumeControl_t0FB79DB008D97572BC239981A26A7C880BA104F0, ___slider_6)),static_cast<int32_t>(offsetof(VolumeControl_t0FB79DB008D97572BC239981A26A7C880BA104F0, ___volumeValue_7)),0,};
